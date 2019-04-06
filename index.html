@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css"
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+    <div class="jumbotron jumbotron-fluid custom-background">
+      <div class="container">
+        <h1 class="display-4">Kwasi's Train Schedule</h1>
+        <p class="lead">Todays Times</p>
+      </div>
+    </div>
+
+    <!-- Six equal columns -->
+    <form>
+      <div class="form-group">
+        <label for="name-view">Train Name</label>
+        <input class="form-control" id="trainName-input" type="text">
+      </div>
+      <div class="form-group">
+        <label for="role-view">Destination</label>
+        <input type="text" class="form-control" id="destination-input">
+      </div>
+      <div class="form-group">
+        <label for="start-date">Frequency</label>
+        <input type="number" class="form-control" id="frequency-input">
+      </div>
+      <div class="form-group">
+        <label for="rate-view">First Train Time</label>
+        <input type="text" class="form-control" id="firstTrainTime-input">
+      </div>
+      <div class="form-group">
+        <label for="rate-view">Minutes Away</label>
+        <input type="text" class="form-control" id="rate-input">
+      </div>
+      <button id="form-submit-button" type="submit">Submit</button>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Train name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Minutes Away</th>
+
+        </tr>
+      </thead>
+      <tbody id="train-schedule">
+        <tr scope="row">
+          <td>New Jersey Devil</td>
+          <td>Pennsylvania</td>
+          <td>20</td>
+          <td>06:30</td>
+          <td>12</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
